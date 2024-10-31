@@ -1,7 +1,5 @@
 # AudioLDM 2
 
-[![arXiv](https://img.shields.io/badge/arXiv-2308.05734-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2308.05734)  [![githubio](https://img.shields.io/badge/GitHub.io-Audio_Samples-blue?logo=Github&style=flat-square)](https://audioldm.github.io/audioldm2/)  [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/haoheliu/audioldm2-text2audio-text2music)  
-
 This repo currently support Text-to-Audio (including Music), Text-to-Speech Generation and Super Resolution Inpainting.
 
 <hr>
@@ -9,17 +7,17 @@ This repo currently support Text-to-Audio (including Music), Text-to-Speech Gene
 ## Change Log
 
 - 2023-08-27: Add two new checkpoints! 
-  - 🌟 **48kHz AudioLDM model**: Now we support high-fidelity audio generation! [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/haoheliu/AudioLDM_48K_Text-to-HiFiAudio_Generation)  
+  - 🌟 **48kHz AudioLDM model**: Now we support high-fidelity audio generation! 
   - **16kHz improved AudioLDM model**: Trained with more data and optimized model architecture.
 
 ## TODO
 
 - [x] Add the text-to-speech checkpoint
-- [x] Open-source the [AudioLDM training code](https://github.com/haoheliu/AudioLDM-training-finetuning).
+- [x] Open-source the [AudioLDM training code](https://github.com/chaosgen/AudioLDM-training-finetuning).
 - [x] Support the generation of longer audio (> 10s)
 - [x] Optimizing the inference speed of the model.
 - [x] Integration with the Diffusers library (see [🧨 Diffusers](#hugging-face--diffusers))
-- [ ] Add the style-transfer and inpainting code for the audioldm_48k checkpoint (PR welcomed, same logic as [AudioLDMv1](https://github.com/haoheliu/AudioLDM))
+- [ ] Add the style-transfer and inpainting code for the audioldm_48k checkpoint (PR welcomed, same logic as [AudioLDMv1](https://github.com/chaosgen/AudioLDM))
 
 ## Web APP
 
@@ -27,8 +25,8 @@ This repo currently support Text-to-Audio (including Music), Text-to-Speech Gene
 
 ```shell
 conda create -n audioldm python=3.8; conda activate audioldm
-pip3 install git+https://github.com/haoheliu/AudioLDM2.git
-git clone https://github.com/haoheliu/AudioLDM2; cd AudioLDM2
+pip3 install git+https://github.com/chaosgen/AudioLDM2.git
+git clone https://github.com/chaosgen/AudioLDM2; cd AudioLDM2
 ```
 
 2. Start the web application (powered by Gradio)
@@ -49,7 +47,7 @@ Prepare running environment
 # Optional
 conda create -n audioldm python=3.8; conda activate audioldm
 # Install AudioLDM
-pip3 install git+https://github.com/haoheliu/AudioLDM2.git
+pip3 install git+https://github.com/chaosgen/AudioLDM2.git
 ```
 
 If you plan to play around with text-to-speech generation. Please also make sure you have installed [espeak](https://espeak.sourceforge.net/download.html). On linux you can do it by
@@ -106,7 +104,7 @@ We have five checkpoints you can choose:
 
 1. **audioldm2-full** (default): Generate both sound effect and music generation with the AudioLDM2 architecture.
 2. **audioldm_48k**: This checkpoint can generate high fidelity sound effect and music.
-3. **audioldm_16k_crossattn_t5**: The improved version of [AudioLDM 1.0](https://github.com/haoheliu/AudioLDM).
+3. **audioldm_16k_crossattn_t5**: The improved version of [AudioLDM 1.0](https://github.com/chaosgen/AudioLDM).
 4. **audioldm2-full-large-1150k**: Larger version of audioldm2-full. 
 5. **audioldm2-music-665k**: Music generation. 
 6. **audioldm2-speech-gigaspeech** (default for TTS): Text-to-Speech, trained on GigaSpeech Dataset.
